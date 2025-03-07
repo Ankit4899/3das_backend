@@ -15,11 +15,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 
 
-// app.get('/',(req,res)=>{
-//     res.status(200).send({
-//         message:"server running",
-//     });
-// });
+app.get('/',(req,res)=>{
+    res.status(200).send({
+        message:"server running",
+    });
+});
 
 app.use("/api/v1/user",require("./routes/userRoutes"));
 app.use("/api/v1/admin",require("./routes/adminRoutes"));
